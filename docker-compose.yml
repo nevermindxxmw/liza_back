@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  cloth_back:
+    image: cloth_back:latest
+    container_name: cloth_back
+    restart: unless-stopped
+    ports:
+      - 3400:8080
+
+networks:
+  default:
+    name: master-net
+    external: true
